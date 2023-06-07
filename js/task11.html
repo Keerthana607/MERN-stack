@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    
+   
+    h1{
+        color:blue;
+    }
+    div{
+        height:700px;
+        width:500px;
+        background-color: pink;
+        margin-left: 300px;
+    }
+    form,h1{
+        margin-left: 100px;
+    }
+    p{
+        color:red;
+    }
+</style>
+    </head>
+    <body>
+        <div>
+    <h1>Registeration Form</h1>
+        <form onsubmit=" return validate()" name="frm">
+            First Name:<input type="text" name="Firstname">
+            <p id="a1"></p>
+            Last Name:<input type="text" name="Lastname">
+            <p id="a2"></p>
+            Email:<input type="text" name="Email">
+            <p id="a3"></p>
+            Password:<input type="password" name="pass">
+            <p id="a8"></p>
+            Re-Enter Password:<input type="password" name="repass">
+            <p id="a9"></p>
+            Gender:
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label><br>
+                    Age:<input type="text" name="age"/>
+                    <p id="a4"></p>
+                    Phone Number:<input type="tel" name="phone"/>
+                    <p id="a5"></p><br><br>
+                    Address:<textarea name="add"></textarea>
+                    <p id="a6"></p><br><br>
+                    State:<input type="text" name="state" />
+                    <p id="a7"></p><br><br>
+                    Country:
+                        <select id="cars" name="cars" >
+                            <option value="" disabled selected>Choose your country</option>
+                            <option value="America">America</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="India">India</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select><br><br>
+                    Language Known:
+                    <input type="checkbox" name="English" value="English">
+                            <label for="English">English</label>
+                            <input type="checkbox" name="Kannada" value="Kannada">
+                            <label for="Kannada">Kannada</label>
+                            <input type="checkbox" name="Hindi" value="Hindi">
+                            <label for="Hindi">Hindi</label>
+                            <input type="checkbox" name="Telugu" value="Telugu">
+                            <label for="Telugu">Telugu</label><br><br>
+
+                <input type="checkbox" name="Agree" value="Agree">
+                <label for="Agree">Hereby I declare all the given details are true</label><br><br>
+                <button class="register" type="submit">REGISTER</button><br>
+        </form>
+    </div>
+    <script>
+        function validate(){
+             var name=document.frm.Firstname.value;
+             var lname=document.frm.Lastname.value;
+             var mail=document.frm.Email.value;
+             var pass=document.frm.pass.value;
+             var repa=document.frm.repass.value;
+             var age=document.frm.age.value;
+             var phone=document.frm.phone.value;
+             var state=document.frm.state.value;
+             var add=document.frm.add.value;
+            if (name == ""||name.length<5) {
+                document.getElementById("a1").innerHTML="POOR";
+    return false;
+  }
+if (lname == ""||lname.length<5) {
+                document.getElementById("a2").innerHTML="POOR";
+    return false;
+  }
+  if (mail == ""||mail.length<10) {
+                document.getElementById("a3").innerHTML="POOR";
+    return false;
+  }
+  if (pass== ""||pass.length<10) {
+                document.getElementById("a8").innerHTML="POOR";
+    return false;
+  }
+  if (repa==""||pass!==repa) {
+                document.getElementById("a9").innerHTML="POOR OR MISMATCH";
+    return false;
+  }
+  if (age == ""||age<0||age>100) {
+                document.getElementById("a4").innerHTML="POOR";
+    return false;
+  }if (phone == ""||phone.length!=10) {
+                document.getElementById("a5").innerHTML="POOR";
+    return false;
+  }
+  if (add== ""||add.length<5) {
+                document.getElementById("a7").innerHTML="POOR";
+    return false;
+  }
+  if (state== ""||state.length<5) {
+                document.getElementById("a7").innerHTML="POOR";
+    return false;
+  }
+
+            }
+    </script>
+    </body>
+</html>

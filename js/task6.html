@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        Enter a String: <input type="text" id="f1" ><br><br>
+        <button onclick="reverse()" >REVERSE</button>
+        <p id="a"></p>
+        <script>
+            function reverse(){
+                a=document.getElementById("f1").value;
+                var b="";
+                for(var i=1;i<a.length+1;i++){
+                    b+=a[a.length-i]
+                }
+                document.getElementById("a").innerHTML="After reversing: "+b;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input type="button" value="show date"  onclick="f2()">
+        <p id="k"></p>
+        <input type="button" value="show time"  onclick="f1()">
+        <p id="k1"></p>
+        <script>
+            d=new Date()
+            function f1(){
+                document.getElementById("k1").innerHTML=d;
+
+            }
+            function f2(){
+                const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                document.getElementById("k").innerHTML=d.getDate()+"/"+month[d.getMonth()]+"/"+d.getFullYear();
+
+            }
+
+        </script>
+    </body>
+</html>
